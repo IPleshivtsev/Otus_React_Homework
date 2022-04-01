@@ -12,7 +12,7 @@ const question = (): Promise<null> =>
     rl.question("> ", (answer: string) => {
       const result = runner(answer);
 
-      if (result) {
+      if (!isNaN(result)) {
         console.log(`Result: ${result}`);
       }
 
